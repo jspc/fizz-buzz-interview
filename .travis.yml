@@ -1,0 +1,10 @@
+language: go
+go:
+  - 1.7.4
+  - tip
+
+script:
+  - go test -cpu=1,2 -v -tags integration ./...
+
+notifications:
+  email: false
