@@ -1,6 +1,43 @@
 fizz-buzz-interview
 ==
 
+Sample golang fizz-buzz interview application.
+
+```bash
+$ ./fizz-buzz-interview -h
+Usage of ./fizz-buzz-interview:
+  -buzz int
+        Value of buzz; multiples of which will be replaced with 'buzz' (default 5)
+  -fizz int
+        Value of fizz; multiples of which will be replaced with 'fizz' (default 3)
+  -range int
+        Range of values to run fizz buzz against (default 300)
+```
+
+Building
+--
+
+```bash
+$ go build
+```
+
+
+Docker Container
+--
+
+```bash
+$ docker build -t fizz-buzz .
+$ docker run -ti fizz-buzz # etc.; as above
+```
+
+Testing
+--
+
+```bash
+$ go test -v ./...
+```
+
+
 | who       | what |
 |-----------|------|
 | dockerhub | https://hub.docker.com/r/jspc/fizz-buzz-interview/   |
@@ -32,4 +69,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
